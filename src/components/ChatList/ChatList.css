@@ -1,0 +1,29 @@
+.ChatList{
+	padding: 24px;
+
+}
+
+.chat-image {
+	width: 52px;
+    height: 52px;
+
+}
+
+.chatList-list {
+    padding: 11px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.chatList-list:hover {
+	background: #f1f3f6;
+}
+
+.primary-text {
+ 	color: #000000;
+	font-size: 16px;
+}
+
+.secondary-text {
+	color: #878787;
+	font-size: 12px;
+}
