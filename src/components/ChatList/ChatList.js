@@ -42,8 +42,10 @@ let ChatList = () => {
 
  let filterChats = (value) => {
 	const filteredcChatList = chatList.filter((val) => {
-		return (val.orderId.includes(value) && val.title.includes(value))
+		//console.log(val)
+		return val.orderId.toLowerCase().includes(value) || val.title.toLowerCase().includes(value);
 	})
+	console.log(filteredcChatList)
 	setfilteredChatList([...filteredcChatList]);
  }
 
@@ -56,7 +58,7 @@ let ChatList = () => {
     <div className="ChatList flex">
 		<div className='chats flex50'>
 			<div className='filterInput'>
-				<input placeholder='Filter By Title/ Order Id' type='text' onKeyDown={(e) => filterChats(e.target.value)} />
+				<input placeholder='Filter By Title/ Order Id' type='text' onKeyUp={(e) => filterChats(e.target.value)} />
 			</div>
 			<div>
 				{
